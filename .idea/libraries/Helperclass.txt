@@ -1,0 +1,30 @@
+import java.net.UnknownHostException; 
+import com.mongodb.*; 
+
+public class Helperclass
+{ 
+
+    public static DBObject[] createSampleData(){ 
+          
+    DBObject aa = new DBObject(); 
+        
+             
+      return sampleData; 
+   } 
+   
+  public static void main(String[] args) throws UnknownHostException{ 
+       
+      // Create sample data 
+       
+  final  DBObject[] sampleData = createSampleData(); 
+       
+       // Standard URI format: mongodb://[dbuser:dbpassword@]host:port/dbname 
+     
+     MongoClientURI uri  = new MongoClientURI("mongodb://user:pass@host:port/db");  
+      MongoClient connection = new MongoClient(uri); 
+      DB db = connection.getDB(uri.getDatabase()); 
+      connecion.close();
+}
+}
+        
+     
